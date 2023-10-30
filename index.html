@@ -19,18 +19,18 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar bg-transparent">
       <div class="container-fluid">
         <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          Damon Raffels
-        </button>
+        class="navbar-toggler border-0"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+      <i class="bi bi-list"></i>
+      </button>
         <div class="socials">
           <ul class="nav d-flex">
             <li>
@@ -56,13 +56,21 @@
             </li>
           </ul>
         </div>
-        <div
-          class="offcanvas offcanvas-start p-0 m-0 border-0"
+        <div class="offcanvas offcanvas-start p-0 m-0 border-0"
           tabindex="-1"
           id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
+          aria-labelledby="offcanvasNavbarLabel">
+          <button
+          class="navbar-toggler scnd border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
         >
-          <div class="offcanvas-body p-0 m-0">
+        <i class="bi bi-list"></i>
+        </button>
+          <div class="offcanvas-body p-0 m-0 h-100">
             <ul class="navbar-nav d-flex flex-grow-1 p-0 m-0">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#Home">Home</a>
@@ -131,6 +139,7 @@
     </nav>
 
     <section id="Home">
+      <img src="https://i.postimg.cc/4Nr8LMPk/Background.jpg" alt="Background">
       <div class="mainText">
         <h1>I'm <span>Damon Raffels</span></h1>
         <p>Aspiring developer</p>
