@@ -27,29 +27,29 @@ section{
     background: rgb(202, 62, 71);
 }
 .displayedNav{
-    top: 9.1vh;
+    top: 30vh;
 }
 #offcanvasNavbar{
-    position: absolute;
-    top: 4rem;
     background: transparent;
     height: 80vh;
     width: 12rem;
     align-items: center;
 }
 .offcanvas-body{
+    position: absolute;
+    top: 30vh;
     height: 80%;
     width: 100%;
 }
 .navbar-nav{
     width: 100%;
     position: relative;
-    top: 20vh;
     gap: 20px;
 }
 :is(.nav-item, .nav-item2) {
     border-radius: 0 30px 30px 0;
-    background: rgb(105, 119, 155);
+    /* background: rgb(105, 119, 155); */
+    background: rgb(202, 62, 71);
     height: 2rem;
 }
 :is(.nav-item, .nav-item2) a{
@@ -64,21 +64,23 @@ section{
     width: 2rem;
     padding-left: 5px;
 }
-.offcanvas-header{
-    width: 100%;
-    height: 3.5rem;
-    background: rgb(202, 62, 71);
-}
 .offcanvas-backdrop{
     display: none;
 }
-.navbar-toggler{
+:is(.navbar-toggler, .navbar-toggler.scnd){
     margin: 0;
     padding: 0;
     font-size: 3rem;
+    color: rgb(202, 62, 71);
+}
+.navbar-toggler.scnd{
+    position: absolute;
+    top: .16em;
+    left: .25em;
+    color: transparent;
 }
 .socialIcons{
-    color: rgb(49, 49, 49);
+    color: rgb(202, 62, 71);
     font-size: 2em;
     margin: 1rem;
 }
@@ -93,6 +95,11 @@ section{
 }
 .nav-link{
     height: 1em;
+}
+.Name{
+    /* position: absolute; */
+    font-size: 2rem;
+    left: 0;
 }
 
 /* Home Page */
@@ -112,7 +119,8 @@ section{
     color: rgb(202, 62, 71);
 }
 .profilephoto{ 
-    border: 3px solid rgb(202, 62, 71);
+    box-shadow: 5px 5px 5px 2px rgb(20, 20, 20);
+    border: 3px solid rgb(49, 49, 49);
     object-fit: cover;
     position: absolute;
     right: 2rem;
@@ -120,6 +128,11 @@ section{
     width: 400px;
 }
 img[alt="Profileimg"]{
+    width: 100%;
+    height: 100%;
+    background: rgb(49, 49, 49);
+}
+img[alt="Background"]{
     width: 100%;
     height: 100%;
 }
