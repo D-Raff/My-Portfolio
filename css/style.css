@@ -9,9 +9,13 @@
         display: none;
     }
 }
+body{
+    width: 100vw;
+}
 
 section{
     height: 100vh;
+    width: 100vw;
     background: rgb(49, 49, 49);
 }
 
@@ -89,4 +93,33 @@ section{
 }
 .nav-link{
     height: 1em;
+}
+
+/* Home Page */
+#Home{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainText{
+    position: absolute;
+    left: 12em;
+    /* border: 10px solid blue; */
+    color: white;
+}
+.mainText span{
+    color: rgb(202, 62, 71);
+}
+.profilephoto{ 
+    border: 3px solid rgb(202, 62, 71);
+    object-fit: cover;
+    position: absolute;
+    right: 2rem;
+    bottom: 5rem;
+    width: 400px;
+}
+img[alt="Profileimg"]{
+    width: 100%;
+    height: 100%;
 }
