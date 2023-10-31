@@ -136,3 +136,12 @@ img[alt="Background"]{
     width: 100%;
     height: 100%;
 }
+
+/* About Page */
+.Aboutmain{
+    border: 3px solid blue;
+    height: 25rem;
+    width: 40rem;
+    position: relative;
+    right: 2rem;
+}
