@@ -14,7 +14,7 @@ body {
   width: 100vw;
 }
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: rgb(49, 49, 49);
 }
@@ -170,36 +170,46 @@ img[alt="secondaryprofile"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid rgb(202, 62, 71);
 }
 .cardcontainer {
-  border: 4px solid rgb(202, 62, 71);
+  padding: 20px;
   width: 80%;
-  max-height: 100%;
+  /* height: 500px; */
+  gap: 20px;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 .card {
   cursor: pointer;
   background: transparent;
-  /* border: ; */
+  height: 150px;
+  width: 250px;
 }
-:is(.face1, .face2) {
-  width: 300px;
-  height: 200px;
-  transition: 0.5s;
-}
-img[alt="netflix-clone"] {
+.content img {
   max-width: 90%;
 }
-.face1 {
-  display: flex;
+:is(.face1, .face2) {
+  width: 100%;
+  max-height: 150px;
+  display: flex; 
   align-items: center;
   justify-content: center;
-  background: #333;
   text-align: center;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.face1 {
+  background: #333;
   z-index: 1;
-  transform: translateY(100px);
+  transform: translateY(10px);
+}
+.face2{
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-110px);
 }
 .card:hover {
   .face1 {
@@ -214,6 +224,7 @@ img[alt="netflix-clone"] {
   }
   .face2{
     transform: translateY(0);
+    z-index: 2;
   }
 }
 .face1 .content {
@@ -224,16 +235,6 @@ img[alt="netflix-clone"] {
     margin: 10px 0 0;
     color: #fff;
     font-size: 1.5em;
-}
-.face2{
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
 }
 .content a{
     margin-inline: 5px;
@@ -247,9 +248,6 @@ img[alt="netflix-clone"] {
     background: rgb(49, 49, 49);
     color: #fff;
 }
-
-
-
 
 
 .mainText {
