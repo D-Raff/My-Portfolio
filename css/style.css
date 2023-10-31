@@ -28,6 +28,7 @@ section {
 }
 .displayedNav {
   top: 30vh;
+  z-index: 2;
 }
 #offcanvasNavbar {
   background: transparent;
@@ -189,28 +190,54 @@ img[alt="secondaryprofile"] {
 }
 .workSlide{
     display: flex;
+    gap: 1em;
+    /* overflow: hidden; */
 }
 .mainCard {
   border: 3px solid rgb(105, 119, 155);
-  width: 200px;
+  width: 180px;
   height: 100%;
   display: flex;
   text-align: center;
   align-items: center;
   background: rgb(202, 62, 71);
   color: #fff;
+  z-index: 1;
 }
 .workCard {
   border: 3px solid rgb(105, 119, 155);
-  width: 200px;
+  width: 180px;
   height: 100%;
+  font-size: .8em;
+  padding: 10px;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   background: rgb(202, 62, 71);
   color: #fff;
+  visibility: hidden;
+  transition: .5s;
 }
+.card1{
+    transform: translateX(-195px );
+}
+.card2{
+    transform: translateX(-390px);
+}
+.card3{
+    transform: translateX(-590px);
+}
+.card4{
+    transform: translateX(-785px);
+}
+.workSlide:hover{
+    .workCard{
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
 
 /* Projects Page */
 #Projects {
