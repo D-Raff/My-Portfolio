@@ -404,7 +404,6 @@ img[alt="secondaryprofile"] {
   padding: 0;
 }
 .testcontainer {
-  border: 3px solid rgb(202, 62, 71);
   height: 92vh;
   width: 100%;
   display: flex;
