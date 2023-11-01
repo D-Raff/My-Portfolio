@@ -174,38 +174,62 @@ img[alt="secondaryprofile"] {
   align-items: center;
 }
 .Skills {
-  border: 3px solid rgb(105, 119, 155);
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 90%;
-}
-.work-Ed {
-  border: 3px solid rgb(202, 62, 71);
   margin: 0;
   padding: 0;
   height: 200px;
-  width: 90%;
   display: flex;
+  justify-content: center;
+  position: relative;
+  top: 5rem;
+}
+.work-Ed {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 5rem;
 }
 .workSlide{
     display: flex;
     gap: 1em;
-    /* overflow: hidden; */
+}
+.skillSlide{
+  display: flex;
+  gap: 1em;
+  flex-direction: row-reverse;
 }
 .mainCard {
-  border: 3px solid rgb(105, 119, 155);
   width: 180px;
   height: 100%;
   display: flex;
+  flex-direction: column;
   text-align: center;
-  align-items: center;
+  justify-content: center;
+  background: rgb(56, 56, 56);
+  color: rgb(105, 119, 155);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  padding: 10px;
+}
+.mainCard2 {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
   background: rgb(202, 62, 71);
-  color: #fff;
+  color: rgb(44, 44, 44);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
+.maincardtext{
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
 .workCard {
-  border: 3px solid rgb(105, 119, 155);
   width: 180px;
   height: 100%;
   font-size: .8em;
@@ -217,22 +241,72 @@ img[alt="secondaryprofile"] {
   background: rgb(202, 62, 71);
   color: #fff;
   visibility: hidden;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
   transition: .5s;
+}
+.skillCard {
+  width: 180px;
+  height: 100%;
+  font-size: .8em;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: rgb(56, 56, 56);
+  color: #fff;
+  visibility: hidden;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+  transition: .5s;
+}
+.hover{
+  text-decoration: underline;
 }
 .card1{
     transform: translateX(-195px );
 }
 .card2{
-    transform: translateX(-390px);
+    transform: translateX(-392px);
 }
 .card3{
-    transform: translateX(-590px);
+    transform: translateX(-588px);
+    
 }
 .card4{
-    transform: translateX(-785px);
+    transform: translateX(-784px);
 }
+.skillCard.card1{
+  transform: translateX(196px);
+  display: flex;
+  flex-direction: column;
+  .soft{
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+}
+.skillCard.card2{
+  transform: translateX(392px);
+}
+.skillCard.card3{
+  transform: translateX(588px);
+}
+.skillCard.card4{
+  transform: translateX(784px);
+}
+.skillCard img{
+  height: 100%;
+}
+
 .workSlide:hover{
+  cursor: pointer;
     .workCard{
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+.skillSlide:hover{
+  cursor: pointer;
+    .skillCard{
         transform: translateX(0);
         visibility: visible;
     }
