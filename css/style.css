@@ -399,30 +399,33 @@ img[alt="secondaryprofile"] {
 /* Testimonials */
 #Testimonials {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   padding: 0;
 }
 .testcontainer {
-  /* border: 3px solid rgb(202, 62, 71); */
-  height: 400px;
-  width: 80%;
+  height: 92vh;
+  width: 100%;
   display: flex;
-  /* justify-content: center; */
-  align-items: center;
+  flex-wrap: wrap;
+  padding-inline: 10px;
+  justify-self: flex-end;
+  overflow: auto;
 }
 .testcard {
-  
   height: 300px;
   width: 300px;
   display: flex;
+  margin-right: 220px;
+  margin-bottom: 10px
 }
 .testimg {
+  object-fit: cover;
   border: 3px solid rgb(202, 62, 71);
   height: 300px;
   width: 300px;
   z-index: 1;
-  box-shadow: 3px 3px 3px rgb(20, 20, 20);
+  box-shadow: 5px 5px 3px rgb(20, 20, 20);
 }
 .testimg img{
   height: 100%;
