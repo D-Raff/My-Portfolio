@@ -110,6 +110,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
 }
 .mainText {
   position: absolute;
@@ -135,9 +136,17 @@ img[alt="Profileimg"] {
   height: 100%;
   background: rgb(49, 49, 49);
 }
+.background{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
 img[alt="Background"] {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+
 }
 
 /* About Page */
@@ -162,8 +171,7 @@ h2 {
   color: rgb(105, 119, 155);
 }
 img[alt="secondaryprofile"] {
-  height: 30rem;
-  border-radius: 0rem;
+  height: 300px;
   box-shadow: 5px 5px 5px rgb(20, 20, 20);
 }
 
@@ -171,35 +179,42 @@ img[alt="secondaryprofile"] {
 #WorkEd {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 .Skills {
   margin: 0;
   padding: 0;
-  height: 200px;
+  height: 300px;
+  width: 90%;
   display: flex;
-  justify-content: center;
+  align-items: end;
   position: relative;
-  top: 5rem;
+  top: 3rem;
 }
 .work-Ed {
+  align-self: center;
   margin: 0;
   padding: 0;
   height: 200px;
+  width: 90%;
   display: flex;
-  justify-content: center;
   position: relative;
-  bottom: 5rem;
 }
 .workSlide {
+  width: 100%;
   display: flex;
-  gap: 1em;
+  flex-wrap: wrap;
+  gap: .5em;
 }
 .skillSlide {
   display: flex;
-  gap: 1em;
+  gap: .5em;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
+  height: 200px;
+  width: 100%;
+  position: relative;
 }
 .mainCard {
   width: 180px;
@@ -263,20 +278,21 @@ img[alt="secondaryprofile"] {
 .hover {
   text-decoration: underline;
 }
-.card1 {
-  transform: translateX(-195px);
+.workCard.card1 {
+  transform: translateX(-188px);
+ 
 }
-.card2 {
-  transform: translateX(-392px);
+.workCard.card2 {
+  transform: translateX(-376px);
 }
-.card3 {
-  transform: translateX(-588px);
+.workCard.card3 {
+  transform: translateX(-564px);
 }
-.card4 {
-  transform: translateX(-784px);
+.workCard.card4 {
+  transform: translateX(-752px);
 }
 .skillCard.card1 {
-  transform: translateX(196px);
+  transform: translateX(188px);
   display: flex;
   flex-direction: column;
   .soft {
@@ -285,13 +301,10 @@ img[alt="secondaryprofile"] {
   }
 }
 .skillCard.card2 {
-  transform: translateX(392px);
+  transform: translateX(376px);
 }
 .skillCard.card3 {
-  transform: translateX(588px);
-}
-.skillCard.card4 {
-  transform: translateX(784px);
+  transform: translateX(564px);
 }
 .skillCard img {
   height: 100%;
@@ -413,19 +426,20 @@ img[alt="secondaryprofile"] {
   overflow: auto;
 }
 .testcard {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 400px;
   display: flex;
-  margin-right: 220px;
-  margin-bottom: 10px
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 .testimg {
   object-fit: cover;
   border: 3px solid rgb(202, 62, 71);
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   z-index: 1;
   box-shadow: 5px 5px 3px rgb(20, 20, 20);
+  position: relative;
 }
 .testimg img{
   height: 100%;
@@ -434,23 +448,23 @@ img[alt="secondaryprofile"] {
 .testContent {
   margin: 0;
   padding: 10px;
-  position: absolute;
-  /* border: 3px solid rgb(202, 62, 71); */
+  position: relative;
   background: rgb(49, 49, 49);
   color: white;
   display: flex;
   flex-wrap: wrap;
-  height: 300px;
+  height: 250px;
   width: 200px;
   justify-content: center;
   text-align: center;
-  font-size: 1em;
+  font-size: .8em;
   transition: 0.5s;
   box-shadow:inset -3px -3px 3px rgb(20, 20, 20);
+  transform: translateX(-200px);
 }
 .testcard:hover {
   .testContent{
-    transform: translateX(300px);
+    transform: translateX(0px);
   }
 }
 
@@ -530,6 +544,7 @@ button[type="submit"] {
   color: rgb(49, 49, 49);
   box-shadow: 3px 3px 3px rgb(20, 20, 20);
   width: 7rem;
+  display: flex;
   text-align: center;
   position: relative;
   left: 19rem;
@@ -563,5 +578,126 @@ footer {
   to {
     opacity: 1;
     line-height: 2rem;
+  }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1080px) {
+  .skillCard{
+    height: 100px;
+    width: 160px;
+  }
+  .skillCard.card1{
+    padding: 0;
+    margin: 0;
+    font-size: .5em;
+    .soft{
+      font-size: .9rem;
+    }
+  }
+  .skillCard.card1 p{
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:580px) and (max-width: 765px){
+  .skillCard.card3{transform: translateY(-200px);}
+  .skillCard.card2{transform: translateX(350px);}
+  .skillCard.card1{transform: translateX(180px);}
+  .skillSlide:hover {
+    .skillCard.card3{
+      transform: translateY(-314px) translateX(-20px);
+    }
+  }
+}
+
+@media screen and (min-width:392px) and (max-width: 580px){
+  .skillCard.card3{transform: translateY(-200px) translateX(150px);}
+  .skillCard.card2{transform: translateY(-200px);}
+  .skillCard.card1{transform: translateX(180px);}
+  .skillSlide:hover {
+    .skillCard.card3{
+      transform: translateY(-314px) translateX(-20px);
+    }
+    .skillCard.card2{
+      transform: translateY(-314px) translateX(-20px);
+    }
+  }
+}
+
+@media screen and (min-width:300px) and (max-width: 392px){
+  .skillCard{
+    width: 130px;
+  }
+  .skillCard.card3{transform: translateY(-350px);}
+  .skillCard.card2{transform: translateY(-250px);}
+  .skillCard.card1{transform: translateY(-200px);}
+  .skillSlide:hover {
+    .skillCard.card3{
+      transform: translateY(-630px);
+    }
+    .skillCard.card2{
+      transform: translateY(-522px) translateX(-135px);
+    }
+    .skillCard.card1{
+      transform: translateY(-315px);
+    }
+  }
+}
+
+
+@media screen and (max-width: 634px){
+  .workCard{
+    height: 100px;
+  }
+  .workSlide{
+    display: grid;
+  }
+  .workSlide:hover {
+    .workCard {
+      transform: translateY(0);
+      visibility: visible;
+      z-index: 2;
+    }
+  }
+  .workCard.card1 {
+    position: relative;
+    transform: translateY(-120px);
+   
+  }
+  .workCard.card2 {
+    transform: translateY(-220px);
+  }
+  .workCard.card3 {
+    transform: translateY(-330px);
+  }
+  .workCard.card4 {
+    transform: translateY(-450px);
+  }
+}
+
+@media screen and (max-width: 385px) {
+  img[alt="secondaryprofile"]{
+    width: 290px;
+  }
+  .Aboutme p {
+    font-size: .9em;
+  }
+  .interests {
+   font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .contactInfo iframe{
+    width: 100%;
+  }
+  .contactInfo{
+    width: 100%;
+  }
+  .btn{
+    left: 0;
+    bottom: 0;
+    justify-content: center;
   }
 }
