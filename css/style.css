@@ -6,9 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }
 body {
   width: 100vw;
@@ -415,7 +412,7 @@ img[alt="secondaryprofile"] {
 }
 .testcontainer {
   height: 92vh;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
   padding-inline: 10px;
@@ -451,7 +448,7 @@ img[alt="secondaryprofile"] {
   display: flex;
   flex-wrap: wrap;
   height: 250px;
-  width: 200px;
+  width: 190px;
   justify-content: center;
   text-align: center;
   font-size: 0.8em;
@@ -643,6 +640,32 @@ footer {
   .skillSlide:hover {
     .skillCard.card3 {
       transform: translateY(-314px) translateX(-20px);
+    }
+  }
+}
+@media screen and (max-width: 430px){
+  #Testimonials{
+    padding: 0;
+    margin: 0;
+  }
+  .testimg{
+    position: relative;
+    width: 120px;
+  }
+  .testimg img{
+    object-fit: cover;
+  }
+  .testContent{
+    width: 150px;
+    font-size: .7em;
+    visibility: hidden;
+  }
+  .testcard{
+    overflow: hidden;
+  }
+  .testcard:hover{
+    .testContent{
+      visibility: visible;
     }
   }
 }
