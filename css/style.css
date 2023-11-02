@@ -65,11 +65,17 @@ section {
 .offcanvas-backdrop {
   display: none;
 }
-:is(.navbar-toggler, .navbar-toggler.scnd) {
+:is(.navbar-toggler, .navbar-toggler.scnd, .navbar-toggler2) {
   margin: 0;
   padding: 0;
   font-size: 3rem;
   color: rgb(202, 62, 71);
+}
+.navbar-toggler2{
+  background: transparent;
+  position: fixed;
+  z-index: 3;
+  visibility: hidden;
 }
 .navbar-toggler.scnd {
   position: absolute;
@@ -339,6 +345,7 @@ img[alt="secondaryprofile"] {
   background: transparent;
   height: 150px;
   width: 250px;
+  border: none;
 }
 .content img {
   max-width: 90%;
@@ -364,6 +371,7 @@ img[alt="secondaryprofile"] {
   text-align: center;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   transform: translateY(-110px);
+  visibility: hidden;
 }
 .card:hover {
   .face1 {
@@ -379,6 +387,7 @@ img[alt="secondaryprofile"] {
   .face2 {
     transform: translateY(0);
     z-index: 2;
+    visibility: visible;
   }
 }
 .face1 .content {
@@ -420,6 +429,19 @@ img[alt="secondaryprofile"] {
   padding-inline: 10px;
   justify-self: flex-end;
   overflow: auto;
+}
+.testcontainer::-webkit-scrollbar{
+  width: 5px;
+}
+.testcontainer::-webkit-scrollbar-track{
+  width: 5px;
+  background: rgb(202, 62, 71);
+  border-radius: 10px;
+}
+.testcontainer::-webkit-scrollbar-thumb{
+  background: rgb(49, 49, 49);
+  border: 1px solid rgb(202, 62, 71);
+  border-radius: 10px;
 }
 .testcard {
   height: 250px;
@@ -598,6 +620,9 @@ footer {
 
 /* Responsiveness */
 @media screen and (max-width: 1080px) {
+  .hoverMe{
+    visibility: hidden;
+  }
   .skillCard {
     height: 100px;
     width: 160px;
@@ -613,12 +638,21 @@ footer {
   .skillCard.card1 p {
     margin: 0;
   }
+  .navbar-toggler{
+    visibility: hidden;
+  }
+  .navbar-toggler.scnd{
+    visibility: visible;
+  }
+  .navbar-toggler2{
+    visibility: visible;
+  }
 }
 
 @media screen and (max-width: 1037px){
   .card:hover {
     .face2.calculator{
-      transform: translateY(-258px);
+      transform: translateY(-220px);
     }
   }
 }
