@@ -596,6 +596,15 @@ footer {
     margin: 0;
   }
 }
+
+@media screen and (max-width: 1037px){
+  .card:hover {
+    .face2.calculator{
+      transform: translateY(-258px);
+    }
+  }
+}
+
 @media screen and (max-width: 915px) {
   #Home {
     display: flex;
