@@ -406,13 +406,15 @@ img[alt="secondaryprofile"] {
 /* Testimonials */
 #Testimonials {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
   padding: 0;
 }
 .testcontainer {
   height: 92vh;
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   padding-inline: 10px;
@@ -460,6 +462,25 @@ img[alt="secondaryprofile"] {
   .testContent {
     transform: translateX(0px);
   }
+  .clickMe{
+    visibility: hidden;
+  }
+  .hoverMe{
+    visibility: hidden;
+  }
+}
+.MatthewTest{
+  font-size: .7em;
+  overflow: auto;
+}
+:is(.clickMe, .hoverMe){
+  position: absolute;
+  width: 40px;
+  font-size: .8em;
+  background: rgb(202, 62, 71);
+  border: none;
+  right: 0;
+  border-radius: 0 0 0 10px;
 }
 
 /* Contact Page */
@@ -497,7 +518,7 @@ img[alt="secondaryprofile"] {
   box-shadow: inset -10px 10px 10px rgb(20, 20, 20);
   background: rgb(49, 49, 49);
   border-radius: 0 10px 10px 0;
-  width: 400px;
+  width: 300px;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -542,7 +563,7 @@ button[type="submit"] {
   text-align: center;
   position: relative;
   left: 19rem;
-  bottom: 18.8rem;
+  bottom: 17.4rem;
 }
 
 /* footer */
@@ -643,6 +664,16 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: 1080px){
+  .clickMe{
+    visibility: hidden;
+  }
+  .hoverMe{
+    visibility: visible;
+  }
+}
+
 @media screen and (max-width: 430px){
   #Testimonials{
     padding: 0;
@@ -655,9 +686,15 @@ footer {
   .testimg img{
     object-fit: cover;
   }
+  .Matthew{
+    font-size: .8em;
+  }
+  .MatthewTest{
+    overflow: auto;
+  }
   .testContent{
     width: 150px;
-    font-size: .7em;
+    font-size: .68em;
     visibility: hidden;
   }
   .testcard{
