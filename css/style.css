@@ -762,7 +762,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 392px) {
+@media screen and (max-width: 393px){
   .skillCard {
     width: 130px;
   }
@@ -784,6 +784,20 @@ footer {
     }
     .skillCard.card1 {
       transform: translateY(-310px);
+    }
+  }
+}
+
+@media screen and (min-width: 353px) and (max-width: 392px){
+  .skillCard.card1{
+    transform: translateY(0px);
+  }
+  .skillSlide:hover{
+    .skillCard.card1{
+      transform: translateY(-103px) translateX(188px);
+    }
+    .skillCard.card3 {
+      transform: translateY(-412px);
     }
   }
 }
