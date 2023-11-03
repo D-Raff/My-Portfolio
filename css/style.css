@@ -357,6 +357,7 @@ img[alt="secondaryprofile"] {
 }
 .content img {
   max-width: 90%;
+  height: 100px;
 }
 :is(.face1, .face2) {
   width: 100%;
