@@ -27,6 +27,7 @@ section {
   position: absolute;
   height: 4rem;
   background: rgb(202, 62, 71);
+  z-index: 3;
 }
 .displayedNav {
   top: 30vh;
