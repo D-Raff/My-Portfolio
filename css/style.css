@@ -273,6 +273,7 @@ img[alt="secondaryprofile"] {
   font-size: 0.8em;
   padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
